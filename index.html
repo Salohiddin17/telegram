@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============== S T Y L E   C S S =================   -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- ============== F O N T   A W A S O M E ==============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Telegram Desktop</title>
+</head>
+<body id="body">
+
+    <!-- ================ START TG Header  ================ -->
+    <header class="tg__header">
+        <div class="container tg__header_bar">
+            <a class="tg__side_bar" id="tgSideBarModal">
+                <i class="fa fa-bars fa-lg" id="fas"></i>
+                <!-- <p id="p">X</p> -->
+                <h2>Telegram</h2>
+                <ul class="list-modal">
+                    <li class="list-modal-item">
+                        <img src="img/friends.svg" alt="group" width="25" height="25">
+                        <p>New Group</p>
+                    </li>
+                    <li class="list-modal-item">
+                        <img src="img/contact-book.svg" alt="contact-book" width="25" height="25">
+                        <p>Contacts</p>
+                    </li>
+                    <li class="list-modal-item">
+                        <img src="img/settings.svg" alt="settings" width="25" height="25">
+                        <p>Settings</p>
+                    </li>
+                    <li class="list-modal-item">
+                        <!-- <i class="fa fa-question-circle fa-2x"></i> -->
+                        <p>Telegram FAQ</p>
+                    </li>
+                    <li class="list-modal-item">
+                        <!-- <img src="img/telegram-logo-new.svg" alt="telegram-logo" width="25" height="25"> -->
+                        <p>About</p>
+                    </li>
+                </ul>
+            </a>
+            <div class="tg__right_bar">
+                <a class="text-notification">
+                    <h4>Pavel Durov</h4>
+                    <span>last seen recently</span>
+                </a>
+                <div class="tg__head-btn">
+                    <a class="call-btn" id="callBtn">
+                        <img src="https://costarvideo.com/Portals/0/menuico/menu-video.png?ver=2014-12-19-145809-667" alt="" width="25" height="25">
+                    </a>
+                    <a class="dropdown-toggle">
+                        <i class="fa fa-ellipsis-v fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+     <!-- ================ END TG Header  ================ -->
+
+     
+    <!-- ================ Start TG Main  ================ -->
+
+    <main class="tg-main">
+        <div class="tg__page">
+
+                <!-- Left panel  -->
+            <div class="tg__dialogs_col_wrap">
+
+                <!-- TG INPUT SEARCH  -->
+                <div class="tg__dialog_panel">
+                    <div class="tg__dialog_search">
+                        <a>
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <input class="tg__dialog_search_input" type="search" placeholder="Search" id="searchInput">
+                    </div>
+                </div>
+                <div class="nano-content">
+                    <ul class="nav" id="list">
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <i class="fa fa-telegram fa-3x"></i>
+                                <div class="tg__message_wrap">
+                                    <h4>Telegram</h4>
+                                    <p><span></span>Hello!</p>
+                                </div>
+                                <time>10:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__ilon-musk" src="img/ilon_musk.jpg" alt="ilonmusk" width="50px" height="50px">
+                                <div class="tg__message_wrap">
+                                    <h4>Ilon Musk</h4>
+                                    <p><span>You:</span>concentrate</p>
+                                </div>
+                                <time>08:49</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__stive-jobs" src="img/stive-jobs.jpg" alt="stive-jobs" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Stive Jobs</h4>
+                                    <p><span>You:</span>divide the time</p>
+                                </div>
+                                <time>10:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__pavel" src="img/Pavel-Durov (1).jpg" alt="pavel" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Pavel Durov</h4>
+                                    <p><span></span>Ok!</p>
+                                </div>
+                                <time>1:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__angelina-jolie" src="img/angelina_jolie.jpg" alt="angelina_jolie" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Angelina Jolie</h4>
+                                    <p><span>Voice messages</span></p>
+                                </div>
+                                <time>00:00</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__bill-gates" src="img/bill_gates.jpg" alt="bil" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Bil Gates</h4>
+                                    <p><span>You:</span>read a book</p>
+                                </div>
+                                <time>15:05</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__mark" src="img/mark-zuckerberg-.jpg" alt="mark" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Mark Zuckerberg</h4>
+                                    <p><span>You:</span>What's up</p>
+                                </div>
+                                <time>14:59</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__gal-gadot" src="img/gal_gadot.jpg" alt="gal_gadot" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Gal Gadot</h4>
+                                    <p><span>Missed Call</span></p>
+                                </div>
+                                <time>20:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__khabib" src="img/khabib.jpg" alt="khabib" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Khabib</h4>
+                                    <p><span></span>go for a run</p>
+                                </div>
+                                <time>07:00</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__jeff-bezos" src="img/jeff-bezos-r.jpg" alt="jeff-bezos" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Jeff Bezos</h4>
+                                    <p><span>You:</span>never give up</p>
+                                </div>
+                                <time>17:09</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__stive-rogers" src="img/stive_rogers.png" alt="stive_rogers" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Stive Rogers</h4>
+                                    <p><span>Missed Call</span></p>
+                                </div>
+                                <time>01:15</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                             <a class="tg_dialog">
+                                <img class="img__jackie-chan" src="img/jackie_chan.jpg" alt="jackie_chan" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Jackie Chan</h4>
+                                    <p><span>Photo</span></p>
+                                </div>
+                                <time>10:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__rock" src="img/the-rock.jpg" alt="rock" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>the Rock</h4>
+                                    <p><span>You:</span>Hello!</p>
+                                </div>
+                                <time>5:45</time>
+                            </a>
+                        </li>
+                        <li class="tg__dialog_wrap">
+                            <a class="tg_dialog">
+                                <img class="img__stark" src="img/tony_stark.jpg" alt="tony" width="50" height="50">
+                                <div class="tg__message_wrap">
+                                    <h4>Tony Stark</h4>
+                                    <p><span>Voice messages</span></p>
+                                </div>
+                                <time>12:55</time>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <!-- Right chat  -->
+            <div class="tg__chat_col_wrap">
+                <div class="tg__chat_col-top" id="div">
+                    <time id="time" class="timer">10:20</time>
+                    <div class="message">
+                        <p class="message-text">Lorem ipsdi!</p>
+                        <time class="time">10:40</time>
+                    </div>
+                </div>
+                <div class="tg__chat_col-bottom">
+                    <form id="form" class="input__block">
+                        <label class="custom-file-upload">
+                            <i class="fa fa-paperclip fa-lg" id="file"></i>
+                            <input type="file"/>
+                        </label>
+                        <input type="text" placeholder="Write a message..." id="input">
+                        <video id="videoElement" controls width="1050" height="600" class="videoScreen">
+                            <source>
+                        </video>
+                        <button class="video-btn">
+                            <i class="fa fa-camera fa-lg" class="camera" id="vid"></i>
+                        </button>
+                        <button class="microfon">
+                            <i class="fa fa-microphone fa-lg" id="voiceBtn"></i>
+                        </button>
+                        <button class="send-button" id="sendBtn">
+                            <i class="fa fa-location-arrow fa-2x"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ================ End TG Main  ================ -->
+
+
+<!-- ============== M A I N   J S ==============-->
+    <script src="./js/main.js">
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
