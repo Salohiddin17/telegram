@@ -17,7 +17,7 @@ let chatTime = week + ", " + month + " " + day + ", " + year
 time.textContent = chatTime
 
 
-// function
+// function add sms message
 let form = document.getElementById('form')
 let input = document.getElementById('input')
 let newDiv = document.getElementById('div')
@@ -108,59 +108,23 @@ sendBtn.onclick = () => {
 }
 
 
+// Search input
+function myFunction() {
+  input = document.getElementById('searchInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("list");
+  li = ul.getElementsByTagName('li');
 
-// search input 
-let list = document.querySelector('#list')
-let searchInput = document.querySelector('#searchInput')
-
-
-let users = ['Telegram', 'Ilon Musk', 'Stive Jobs', 'Pavel Durov', 'Angelina Jolie', "Bil Gates", "Mark Zuckerberg", "Gal Gadot", "Khabib", "Jeff Bezos", "Stive Rogers", "Jackie Chan", "the Rock", "Tony Stark"]
-
-function renderElements (array) {
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
 }
-// searchInput 
-searchInput.onkeyup = (event) => {
-	if(searchInput.value != '') {
-		list.innerHTML = null
-		let str = event.target.value.toLowerCase()
-		for( let user of users ) {
-			let startIndex = user.toLowerCase().search(str)
-			if( user.toLowerCase().includes(str) ) {
-				let searchedWord = user.slice(startIndex, startIndex + str.length)
-				let initWord     = user.slice(user[0], startIndex)
-				let endWord      = user.slice(startIndex + str.length, user.length)
-				let li = document.createElement('li')
-				li.innerHTML = initWord + `<mark>${searchedWord}</mark>` + endWord
-				list.appendChild(li)
-			}
-		}
-	} else {
-		list.innerHTML = null
-		renderElements(users)
-	}
-}
-
-searchBtn.onclick = () => {
-}
-renderElements(users)
-
-
-
-//Modal
-let modal1 = document.querySelector('#tgSideBarModal')
-let ul1 = document.querySelector('.list-modal')
-modal1.onclick = () => {
-	ul1.style.display = "block"
-	modal1.style.backgroundColor = "#497799"
-	// p.style.display = "block"
-	// fas.style.display = "none"
-}
-// p.onclick = () => {
-// 	ul1.style.display = "none"
-// 	fas.style.display = "block"
-// 	console.log('hello')
-// }
-
 
 
 

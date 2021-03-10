@@ -13,7 +13,6 @@ body {
     margin: 0px;
     padding: 0px;
     position: relative;
-    /* width: 100vw; */
 }
 
 
@@ -40,19 +39,9 @@ body {
     position: relative;
 }
 
-/* #p {
-    display: none;
-    color: #fff;
-    padding: 3px 5px;
-    position: absolute;
-    left: -50px;
-} */
-
 .modal {
     position: absolute;
     top: 0;
-    /* bottom: 0;*/
-    /* right: 0;  */
     left: 0; 
     width: 20px;
     background-color: #555;
@@ -61,11 +50,6 @@ body {
 .tg__side_bar:hover {
     background-color: #497799;
 }
-
-/* .container {
-    width: 96%;
-    margin: 0px auto;
-} */
 
 .list-modal {
     position: absolute;
@@ -82,8 +66,6 @@ body {
 .list-modal-item {
     display: flex;
     justify-content: center;
-    /* border: 1px solid red; */
-    /* margin: 1px 0; */
 }
 
 .list-modal-item:hover {
@@ -116,7 +98,6 @@ body {
 }
 
 .tg__right_bar {
-    /* width: 700px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,7 +107,6 @@ body {
     width: 630px;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 .text-notification h4 {
@@ -140,7 +120,7 @@ body {
     opacity: 0.8;
     font-size: 13px;
     font-weight: 300px;
-    margin-left: 8px;
+    transform: translateX(20px);
     padding: 16px 20px;
 }
 
@@ -165,7 +145,6 @@ body {
 
 .call-btn{
     padding: 9px 15px;
-    /* color: #fff; */
 }
 
 .call-btn:hover {
@@ -204,7 +183,6 @@ body {
 .tg__dialogs_col_wrap {
     width: 315px;
     position: relative;
-    /* border-right: 3px solid #E9EBED; */
 }
 
 .tg__dialog_search {
@@ -254,19 +232,7 @@ body {
     background-color: #fff;
 }
 
-/* .tg__dialogs_col {
-    margin-right: -7px;
-} */
-
-/* .nano {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-} */
-
 .nano-content {
-    /* position: absolute; */
     overflow: scroll;
     overflow-x: hidden;
     top: 0;
@@ -276,14 +242,11 @@ body {
     height: 510px;
     border-bottom-left-radius: 1px;
     border-bottom-right-radius: 1px;
-    /* scrollbar-width: thin; */
 }
 
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
-    /* transition: all 10s linear; */
-    /* transition-delay: 1s; */
 }
 /* 
  /* Track */
@@ -313,7 +276,6 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 5px 0px;
-    /* width: 300px; */
 }
 
 .tg_dialog img {
@@ -321,8 +283,28 @@ body {
     border-radius: 50%;
 }
 
+.tg_dialog:hover {
+    background-color: #F2F6FA;
+}
+
+.active {
+    background-color: #6490B1;
+}
+
 .tg_dialog:active {
     background-color: #6490B1;
+    color: #fff;
+}
+
+.tg_dialog:active time{
+    color: #fff;
+}
+
+.tg_dialog:active p{
+    color: #fff;
+}
+
+.tg_dialog:active span{
     color: #fff;
 }
 
@@ -356,6 +338,11 @@ body {
     transform: translateX(8px);
 }
 
+.img-users-li {
+    width: 50px;
+    height: 50px;
+}
+
 .tg_dialog time {
     color: #b3b3b3;
     font-size: .80em;
@@ -372,13 +359,9 @@ body {
 /* =========== top panel start ============= */
 
 .tg__chat_col-top {
-    /* width: 735px; */
     height: 525px;
     overflow: auto;
-    /* border: 1px solid black; */
-    /* height: 360px; */
     width: 100%;
-    /* background-color: white; */
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
@@ -401,29 +384,39 @@ body {
 
 .message {
     position: relative;
-    background-color: #DFF5FD;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 5px 8px;
-    border-radius: 5px;
-    width: 229px;
-    margin-top: 10px;
-    margin-left: 485px;
 }
 
-.message::before {
+.message-stranger::before {
     content: "";
     display: block;
     width: 0;
     height: 0;
-    border-left: 5px solid #DFF5FD;
-    border-bottom: 5px solid #DFF5FD;
-    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid #F2F6FA;
+    border-right: 5px solid #F2F6FA;
     border-top: 5px solid transparent;
     position: absolute;
-    right: -7px;
     bottom: 0;
+    margin-left: -17px;
+    border-radius: 2px;
+}
+
+.message-text::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid #DFF5FD;
+    border-right: 5px solid #DFF5FD;
+    border-top: 5px solid transparent;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-left: -12px;
     border-radius: 2px;
 }
 
@@ -431,15 +424,33 @@ body {
     display: block;
     background-color: #DFF5FD;
     font-size: 14px;
-    margin: 0;
+    margin: 5px 0px;
     line-height: 16px;
-    max-width: 220px;
+    max-width: 120px;
     font-weight: 400;
     color: black;
     padding: 5px;
     border-radius: 3px;
+    margin-left: 600px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
+}
+
+.message-stranger {
+    display: block;
+    background-color: #F2F6FA;
+    font-size: 14px;
+    margin: 0;
+    line-height: 16px;
+    max-width: 320px;
+    font-weight: 400;
+    color: black;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin-top: 10px;
+    margin-right: 2300px;
+    padding: 8px 10px;
 }
 
 .time {
@@ -490,8 +501,6 @@ body {
     transform: rotate(260deg);
     transition: color .4s ease;
     cursor: pointer;
-    /* width: 10px;
-    border: greenyellow; */
 }
 
 .microfon {
@@ -516,7 +525,6 @@ body {
 .fa-location-arrow {
     color: #45BEE7;
     transform: rotate(42deg);
-    /* border: 1px solid green; */
     margin-right: 10px;
 }
 
